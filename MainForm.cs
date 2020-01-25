@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace kalk
 {
@@ -30,7 +32,9 @@ namespace kalk
 			}
 			if (tabControl1.SelectedIndex == 1) {
 				Width = 523;
-				Height = 261;
+				Height = 273;
+//				Width = 546;
+//				Height = 449;
 			}
 		}
 		void MainFormKeyDown(object sender, KeyEventArgs e) // Работа с клавиатурой
@@ -451,7 +455,7 @@ namespace kalk
 								Result.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 2), 10);
 							if (ToHexaDecimal.Checked)
 								Result.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 2), 16);
-							;
+							
 						} catch {
 							
 							throw new Exception("Введенный символ не является двоичным, либо число больше числового диапазона типа (long)");
@@ -522,11 +526,5 @@ namespace kalk
 				}
 			}
 		}
-		void TabPage2Click(object sender, EventArgs e)
-		{
-	
-		}
-
-
 	}
 }

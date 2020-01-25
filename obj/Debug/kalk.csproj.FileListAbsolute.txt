@@ -19,3 +19,4 @@ C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\obj\Debug\kalk.calculat
 C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\obj\Debug\kalk.csproj.GenerateResource.Cache
 C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\obj\Debug\kalk.exe
 C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\obj\Debug\kalk.pdb
+C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\bin\Debug\kalk.exe.config
