@@ -33,7 +33,7 @@ namespace kalk
 			if (tabControl1.SelectedIndex == 1) {
 				Width = 523;
 				Height = 273;
-//				Width = 546;
+//.				Width = 546;
 //				Height = 449;
 			}
 		}
