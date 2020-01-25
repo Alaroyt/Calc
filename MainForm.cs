@@ -260,23 +260,17 @@ namespace kalk
 		void Sqrt(object sender, EventArgs e)
 		{
 			if (Board.Text != "") {
-				if (!Board.Text.Contains("-")) {
+				if (Board.Text.Contains("-")) {
+					MessageBox.Show("Невозможно извлечь квадратный корень отрицательного числа", "Achtung");
+					Board.Text = "";
+				} else
 					Board.Text = Math.Sqrt(Convert.ToDouble(Board.Text)).ToString();
-				} else {
-					Board.Text = Board.Text.Trim('-', '(', ')');
-					Board.Text = "(-" + Math.Sqrt(Convert.ToDouble(Board.Text)) + ")";
-				}
 			}
-
 		}
 		void Sqr(object sender, EventArgs e)
 		{
 			if (Board.Text != "") {
-				if (!Board.Text.Contains(")"))
-					Board.Text = Math.Pow(Convert.ToDouble(Board.Text), 2).ToString();
-				else {
-					Board.Text = Math.Pow(Convert.ToDouble(Board.Text.Trim('(', ')')), 2).ToString();
-				}
+				Board.Text = Math.Pow(Convert.ToDouble(Board.Text.Trim('(', ')')), 2).ToString();
 			}
 		}
 		void ClipBoard(object sender, EventArgs e)
@@ -287,36 +281,26 @@ namespace kalk
 		void Sin(object sender, EventArgs e)
 		{
 			if (Board.Text != "") {
-				if (!Board.Text.Contains(")"))
-					Board.Text = (Math.Sin(Convert.ToDouble(Board.Text))).ToString();
-				else {
-					Board.Text = Board.Text.Trim('(', ')');
-					Board.Text = (Math.Sin(Convert.ToDouble(Board.Text))).ToString();
-					if (Board.Text.Contains("-"))
-						Board.Text = "(" + Board.Text + ")";
-				}
+				Board.Text = Board.Text.Trim('(', ')');
+				Board.Text = (Math.Sin(Convert.ToDouble(Board.Text))).ToString();
+				if (Board.Text.Contains("-"))
+					Board.Text = "(" + Board.Text + ")";
+				
 			}
 		}
 		void Cos(object sender, EventArgs e)
 		{
 			if (Board.Text != "") {
-				if (!Board.Text.Contains(")"))
-					Board.Text = Board.Text = (Math.Cos(Convert.ToDouble(Board.Text))).ToString();
-				else {
-					Board.Text = Board.Text.Trim('(', ')');
-					Board.Text = (Math.Sin(Convert.ToDouble(Board.Text))).ToString();
-					if (Board.Text.Contains("-"))
-						Board.Text = "(" + Board.Text + ")";
-				}
+				Board.Text = Board.Text.Trim('(', ')');
+				Board.Text = (Math.Sin(Convert.ToDouble(Board.Text))).ToString();
+				if (Board.Text.Contains("-"))
+					Board.Text = "(" + Board.Text + ")";
 			}
-
-			if (Board.Text != "")
-				Board.Text = (Math.Cos(Convert.ToDouble(Board.Text))).ToString();
 		}
 		void Pi(object sender, EventArgs e)
 		{
-			if (Board.Text != "")
-				Board.Text = (Math.PI * (Convert.ToDouble(Board.Text))).ToString();
+			if (Board.Text == "")
+				Board.Text = Math.PI.ToString();
 		}
 		void Ln(object sender, EventArgs e)
 		{

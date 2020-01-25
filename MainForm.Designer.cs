@@ -456,12 +456,13 @@ namespace kalk
 			this.button17.Name = "button17";
 			this.button17.Size = new System.Drawing.Size(41, 35);
 			this.button17.TabIndex = 32;
-			this.button17.Text = "*π";
+			this.button17.Text = "π";
 			this.button17.UseVisualStyleBackColor = true;
 			this.button17.Click += new System.EventHandler(this.Pi);
 			// 
 			// button16
 			// 
+			this.button16.Enabled = false;
 			this.button16.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold);
 			this.button16.Location = new System.Drawing.Point(285, 163);
 			this.button16.Name = "button16";
@@ -473,6 +474,7 @@ namespace kalk
 			// 
 			// button15
 			// 
+			this.button15.Enabled = false;
 			this.button15.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold);
 			this.button15.Location = new System.Drawing.Point(285, 122);
 			this.button15.Name = "button15";
