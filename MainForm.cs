@@ -318,22 +318,16 @@ namespace kalk
 			if (Board.Text != "")
 				Board.Text = (Math.PI * (Convert.ToDouble(Board.Text))).ToString();
 		}
-		void Button22Click(object sender, EventArgs e)
+		void Ln(object sender, EventArgs e)
 		{
-			if (Board.Text != "") {
-				if (!Board.Text.Contains(")"))
-					Board.Text = Board.Text = (Math.Cos(Convert.ToDouble(Board.Text))).ToString();
-				else {
+			if (Convert.ToDouble(Board.Text) > 0) {
+				if (Board.Text != "") {
 					Board.Text = Board.Text.Trim('(', ')');
 					Board.Text = (Math.Log(Convert.ToDouble(Board.Text))).ToString();
-					if (Board.Text.Contains("-"))
-						Board.Text = "(" + Board.Text + ")";
 				}
 			}
-
-			if (Board.Text != "")
-				Board.Text = (Math.Cos(Convert.ToDouble(Board.Text))).ToString();
 		}
+		
 		//
 		// Системы счисления
 		//

@@ -447,7 +447,7 @@ namespace kalk
 			this.button22.TabIndex = 33;
 			this.button22.Text = "ln";
 			this.button22.UseVisualStyleBackColor = true;
-			this.button22.Click += new System.EventHandler(this.Button22Click);
+			this.button22.Click += new System.EventHandler(this.Ln);
 			// 
 			// button17
 			// 
