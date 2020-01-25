@@ -1,0 +1,14 @@
+C:\Users\cd\Documents\SharpDevelop Projects\aplication\kalk\bin\Debug\kalk.exe
+C:\Users\cd\Documents\SharpDevelop Projects\aplication\kalk\bin\Debug\kalk.pdb
+C:\Users\cd\Documents\SharpDevelop Projects\aplication\kalk\obj\Debug\kalk.csprojResolveAssemblyReference.cache
+C:\Users\cd\Documents\SharpDevelop Projects\aplication\kalk\obj\Debug\kalk.csproj.GenerateResource.Cache
+C:\Users\cd\Documents\SharpDevelop Projects\aplication\kalk\obj\Debug\kalk.exe
+C:\Users\cd\Documents\SharpDevelop Projects\aplication\kalk\obj\Debug\kalk.pdb
+C:\Users\cd\Documents\SharpDevelop Projects\aplication\kalk\obj\Debug\kalk.calculatorByPrusov.resources
+C:\Users\cd\Documents\SharpDevelop Projects\kalk\bin\Debug\kalk.exe
+C:\Users\cd\Documents\SharpDevelop Projects\kalk\bin\Debug\kalk.pdb
+C:\Users\cd\Documents\SharpDevelop Projects\kalk\obj\Debug\kalk.calculatorByPrusov.resources
+C:\Users\cd\Documents\SharpDevelop Projects\kalk\obj\Debug\kalk.csproj.GenerateResource.Cache
+C:\Users\cd\Documents\SharpDevelop Projects\kalk\obj\Debug\kalk.exe
+C:\Users\cd\Documents\SharpDevelop Projects\kalk\obj\Debug\kalk.pdb
+C:\Users\cd\Documents\SharpDevelop Projects\kalk\obj\Debug\kalk.csprojResolveAssemblyReference.cache
