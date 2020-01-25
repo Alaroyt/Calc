@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using System.Text.RegularExpressions;
 
 namespace kalk
 {
@@ -20,13 +19,13 @@ namespace kalk
 
 			MaximizeBox = false;
 
-			Width = 369;
+			Width = 420;
 			Height = 395;
 		}
-		void TabContro1SelectedIndexChanged(object sender, EventArgs e)// Если вкладки переключаются, то размеры формы меняются
+		void TabContro1SelectedIndexChanged(object sender, EventArgs e)// Если вкладки переключаются, размеры формы меняются
 		{
 			if (tabControl1.SelectedIndex == 0) {
-				Width = 369;
+				Width = 420;
 				Height = 395;
 			}
 			if (tabControl1.SelectedIndex == 1) {
@@ -34,7 +33,7 @@ namespace kalk
 				Height = 261;
 			}
 		}
-		void MainFormKeyDown(object sender, KeyEventArgs e) // работа с клавиатурой
+		void MainFormKeyDown(object sender, KeyEventArgs e) // Работа с клавиатурой
 		{
 			if (tabControl1.SelectedIndex == 0) {
 				if (e.KeyCode == Keys.D1 | e.KeyCode == Keys.NumPad1)
@@ -277,7 +276,6 @@ namespace kalk
 		{
 			Clipboard.SetText(Board.Text);
 		}
-
 		void Sin(object sender, EventArgs e)
 		{
 			if (Board.Text != "") {
@@ -455,6 +453,7 @@ namespace kalk
 								Result.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 2), 16);
 							;
 						} catch {
+							
 							throw new Exception("Введенный символ не является двоичным, либо число больше числового диапазона типа (long)");
 						}
 					}

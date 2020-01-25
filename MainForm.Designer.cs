@@ -53,6 +53,10 @@ namespace kalk
 		private System.Windows.Forms.Button button16;
 		private System.Windows.Forms.Button button15;
 		private System.Windows.Forms.Button button13;
+		private System.Windows.Forms.Button button29;
+		private System.Windows.Forms.Button button30;
+		private System.Windows.Forms.Button button27;
+		private System.Windows.Forms.Button button28;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -102,6 +106,10 @@ namespace kalk
 			this.button14 = new System.Windows.Forms.Button();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
+			this.button29 = new System.Windows.Forms.Button();
+			this.button30 = new System.Windows.Forms.Button();
+			this.button27 = new System.Windows.Forms.Button();
+			this.button28 = new System.Windows.Forms.Button();
 			this.button22 = new System.Windows.Forms.Button();
 			this.button17 = new System.Windows.Forms.Button();
 			this.button16 = new System.Windows.Forms.Button();
@@ -321,7 +329,7 @@ namespace kalk
 			this.Board.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.Board.Location = new System.Drawing.Point(6, 6);
 			this.Board.Name = "Board";
-			this.Board.Size = new System.Drawing.Size(343, 47);
+			this.Board.Size = new System.Drawing.Size(393, 47);
 			this.Board.TabIndex = 21;
 			this.Board.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.Board.Click += new System.EventHandler(this.ClipBoard);
@@ -374,7 +382,7 @@ namespace kalk
 			// 
 			this.digit.Location = new System.Drawing.Point(6, 56);
 			this.digit.Name = "digit";
-			this.digit.Size = new System.Drawing.Size(343, 47);
+			this.digit.Size = new System.Drawing.Size(393, 47);
 			this.digit.TabIndex = 27;
 			// 
 			// button14
@@ -401,6 +409,10 @@ namespace kalk
 			// 
 			// tabPage1
 			// 
+			this.tabPage1.Controls.Add(this.button29);
+			this.tabPage1.Controls.Add(this.button30);
+			this.tabPage1.Controls.Add(this.button27);
+			this.tabPage1.Controls.Add(this.button28);
 			this.tabPage1.Controls.Add(this.button22);
 			this.tabPage1.Controls.Add(this.button17);
 			this.tabPage1.Controls.Add(this.button16);
@@ -437,6 +449,42 @@ namespace kalk
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "Calculator";
 			this.tabPage1.UseVisualStyleBackColor = true;
+			// 
+			// button29
+			// 
+			this.button29.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button29.Location = new System.Drawing.Point(332, 163);
+			this.button29.Name = "button29";
+			this.button29.Size = new System.Drawing.Size(41, 35);
+			this.button29.TabIndex = 37;
+			this.button29.UseVisualStyleBackColor = true;
+			// 
+			// button30
+			// 
+			this.button30.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.button30.Location = new System.Drawing.Point(332, 122);
+			this.button30.Name = "button30";
+			this.button30.Size = new System.Drawing.Size(41, 35);
+			this.button30.TabIndex = 36;
+			this.button30.UseVisualStyleBackColor = true;
+			// 
+			// button27
+			// 
+			this.button27.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button27.Location = new System.Drawing.Point(332, 245);
+			this.button27.Name = "button27";
+			this.button27.Size = new System.Drawing.Size(41, 35);
+			this.button27.TabIndex = 35;
+			this.button27.UseVisualStyleBackColor = true;
+			// 
+			// button28
+			// 
+			this.button28.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.button28.Location = new System.Drawing.Point(332, 204);
+			this.button28.Name = "button28";
+			this.button28.Size = new System.Drawing.Size(41, 35);
+			this.button28.TabIndex = 34;
+			this.button28.UseVisualStyleBackColor = true;
 			// 
 			// button22
 			// 
@@ -658,7 +706,7 @@ namespace kalk
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(361, 356);
+			this.ClientSize = new System.Drawing.Size(414, 356);
 			this.Controls.Add(this.tabControl1);
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
