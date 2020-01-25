@@ -9,15 +9,15 @@ namespace kalk
 	public partial class calculatorByPrusov : Form
 	{
 		static string line;
-		
+
 		public calculatorByPrusov()
 		{
 			InitializeComponent();
-			
+
 			Board.ReadOnly = true;
-			
+
 			this.KeyPreview = true;
-			
+
 			MaximizeBox = false;
 
 			Width = 369;
@@ -73,11 +73,11 @@ namespace kalk
 			if (e.KeyCode == Keys.Escape) // завершение программы на ESC
 				Close();
 		}
-		
+
 		//
 		// Калькулятор
 		//
-		
+
 		void One(object sender, EventArgs e)
 		{
 			if (!Board.Text.Contains(")"))
@@ -149,9 +149,9 @@ namespace kalk
 				}
 			} else
 				Board.Text = Board.Text.Remove(Board.Text.Length - 1, 1) + "0" + ")";
-			
+
 		}
-		
+
 		void Comma(object sender, EventArgs e)
 		{
 			if (Board.Text != "") {
@@ -164,7 +164,7 @@ namespace kalk
 			line = "";
 			Board.Text = "";
 			digit.Text = "";
-			
+
 		}
 		void Equal(object sender, EventArgs e)
 		{
@@ -192,7 +192,7 @@ namespace kalk
 				digit.Text = line;
 				Board.Text = "";
 			}
-			
+
 		}
 		void Minus(object sender, EventArgs e)
 		{
@@ -201,7 +201,7 @@ namespace kalk
 				digit.Text = line;
 				Board.Text = "";
 			}
-			
+
 		}
 		void Mult(object sender, EventArgs e)
 		{
@@ -213,14 +213,14 @@ namespace kalk
 		}
 		void Div(object sender, EventArgs e)
 		{
-			
+
 			if (Board.Text != "") {
 				line += Board.Text + "/";
 				digit.Text = line;
 				Board.Text = "";
 			}
 		}
-		
+
 		void Plus_Minus(object sender, EventArgs e)
 		{
 			if (Board.Text != "" & Board.Text != "0") {
@@ -267,7 +267,7 @@ namespace kalk
 					Board.Text = "(-" + Math.Sqrt(Convert.ToDouble(Board.Text)) + ")";
 				}
 			}
-				
+
 		}
 		void Sqr(object sender, EventArgs e)
 		{
@@ -283,7 +283,7 @@ namespace kalk
 		{
 			Clipboard.SetText(Board.Text);
 		}
-		
+
 		void Sin(object sender, EventArgs e)
 		{
 			if (Board.Text != "") {
@@ -295,7 +295,7 @@ namespace kalk
 					if (Board.Text.Contains("-"))
 						Board.Text = "(" + Board.Text + ")";
 				}
-			}	
+			}
 		}
 		void Cos(object sender, EventArgs e)
 		{
@@ -309,7 +309,7 @@ namespace kalk
 						Board.Text = "(" + Board.Text + ")";
 				}
 			}
-			
+
 			if (Board.Text != "")
 				Board.Text = (Math.Cos(Convert.ToDouble(Board.Text))).ToString();
 		}
@@ -318,11 +318,26 @@ namespace kalk
 			if (Board.Text != "")
 				Board.Text = (Math.PI * (Convert.ToDouble(Board.Text))).ToString();
 		}
-		
+		void Button22Click(object sender, EventArgs e)
+		{
+			if (Board.Text != "") {
+				if (!Board.Text.Contains(")"))
+					Board.Text = Board.Text = (Math.Cos(Convert.ToDouble(Board.Text))).ToString();
+				else {
+					Board.Text = Board.Text.Trim('(', ')');
+					Board.Text = (Math.Log(Convert.ToDouble(Board.Text))).ToString();
+					if (Board.Text.Contains("-"))
+						Board.Text = "(" + Board.Text + ")";
+				}
+			}
+
+			if (Board.Text != "")
+				Board.Text = (Math.Cos(Convert.ToDouble(Board.Text))).ToString();
+		}
 		//
 		// Системы счисления
 		//
-		
+
 		void CheckIsNeedReadOnly()
 		{
 			BoardDigit.ReadOnly &= !((FromBin.Checked | FromOctal.Checked | FromDecimal.Checked | FromHexaDecimal.Checked) & (ToBinary.Checked | ToOctal.Checked | ToDecimal.Checked | ToHexaDecimal.Checked));
@@ -331,7 +346,7 @@ namespace kalk
 		{
 			BoardDigit.Text = "";
 			BoardDigit.ReadOnly = true;
-			
+
 		}
 		void FromBinCheckedChanged(object sender, EventArgs e)
 		{
@@ -360,7 +375,7 @@ namespace kalk
 				FromDecimal.Enabled = true;
 				FromHexaDecimal.Enabled = true;
 			}
-		
+
 		}
 		void FromDecimalCheckedChanged(object sender, EventArgs e)
 		{
@@ -530,23 +545,7 @@ namespace kalk
 				}
 			}
 		}
-		void Button22Click(object sender, EventArgs e)
-		{
-			if (Board.Text != "") {
-				if (!Board.Text.Contains(")"))
-					Board.Text = Board.Text = (Math.Cos(Convert.ToDouble(Board.Text))).ToString();
-				else {
-					Board.Text = Board.Text.Trim('(', ')');
-					Board.Text = (Math.Log(Convert.ToDouble(Board.Text))).ToString();
-					if (Board.Text.Contains("-"))
-						Board.Text = "(" + Board.Text + ")";
-				}
-			}
-			
-			if (Board.Text != "")
-				Board.Text = (Math.Cos(Convert.ToDouble(Board.Text))).ToString();
-		}
-		
+
+
 	}
 }
-

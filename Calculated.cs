@@ -11,10 +11,6 @@ namespace kalk
 
 		public static List<char> operand = new List<char>();
 
-		//		public static string percent(string line)
-		//		{
-		//			return "";
-		//		}
 		public static string Factorial(string value)
 		{
 			if (int.Parse(value) == 0)
@@ -27,10 +23,9 @@ namespace kalk
 		}
 
 		public static string Kalk(string line)// Мой строчный калькулятор
-		
+
 		{
 			try {
-				//				c.WriteLine("Строчный калькулятор v2.1");
 				ParsingString(line);
 				if (operand.Contains('*') | operand.Contains('/')) {
 					for (int i = 0; i <= operand.Count - 1;) {
@@ -71,7 +66,7 @@ namespace kalk
 		}
 
 		static void ParsingString(string line)//разбор строки на числа (List digits) и операнды(+,-,*,/)(List operand)
-		
+
 		{
 			string str = line;
 			char[] mas = str.ToCharArray();
@@ -109,6 +104,3 @@ namespace kalk
 		}
 	}
 }
-
-
-
