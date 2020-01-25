@@ -57,6 +57,10 @@ namespace kalk
 		private System.Windows.Forms.Button button30;
 		private System.Windows.Forms.Button button27;
 		private System.Windows.Forms.Button button28;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label label3;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -116,6 +120,10 @@ namespace kalk
 			this.button15 = new System.Windows.Forms.Button();
 			this.button13 = new System.Windows.Forms.Button();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.label7 = new System.Windows.Forms.Label();
+			this.label8 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.ToHexaDecimal = new System.Windows.Forms.CheckBox();
 			this.ToBinary = new System.Windows.Forms.CheckBox();
@@ -545,6 +553,10 @@ namespace kalk
 			// 
 			// tabPage2
 			// 
+			this.tabPage2.Controls.Add(this.label7);
+			this.tabPage2.Controls.Add(this.label8);
+			this.tabPage2.Controls.Add(this.label4);
+			this.tabPage2.Controls.Add(this.label3);
 			this.tabPage2.Controls.Add(this.groupBox1);
 			this.tabPage2.Controls.Add(this.label2);
 			this.tabPage2.Controls.Add(this.group1);
@@ -558,6 +570,39 @@ namespace kalk
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "DigitSystemConverter";
 			this.tabPage2.UseVisualStyleBackColor = true;
+			this.tabPage2.Click += new System.EventHandler(this.TabPage2Click);
+			// 
+			// label7
+			// 
+			this.label7.Location = new System.Drawing.Point(99, 70);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(38, 13);
+			this.label7.TabIndex = 43;
+			this.label7.Text = "0000";
+			// 
+			// label8
+			// 
+			this.label8.Location = new System.Drawing.Point(143, 70);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(40, 13);
+			this.label8.TabIndex = 42;
+			this.label8.Text = "0000";
+			// 
+			// label4
+			// 
+			this.label4.Location = new System.Drawing.Point(11, 70);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(38, 13);
+			this.label4.TabIndex = 37;
+			this.label4.Text = "0000";
+			// 
+			// label3
+			// 
+			this.label3.Location = new System.Drawing.Point(55, 70);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(40, 13);
+			this.label3.TabIndex = 36;
+			this.label3.Text = "0000";
 			// 
 			// groupBox1
 			// 
@@ -565,7 +610,7 @@ namespace kalk
 			this.groupBox1.Controls.Add(this.ToBinary);
 			this.groupBox1.Controls.Add(this.ToOctal);
 			this.groupBox1.Controls.Add(this.ToDecimal);
-			this.groupBox1.Location = new System.Drawing.Point(257, 73);
+			this.groupBox1.Location = new System.Drawing.Point(257, 86);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(155, 118);
 			this.groupBox1.TabIndex = 35;
@@ -627,7 +672,7 @@ namespace kalk
 			this.group1.Controls.Add(this.FromBin);
 			this.group1.Controls.Add(this.FromDecimal);
 			this.group1.Controls.Add(this.FromOctal);
-			this.group1.Location = new System.Drawing.Point(11, 73);
+			this.group1.Location = new System.Drawing.Point(11, 86);
 			this.group1.Name = "group1";
 			this.group1.Size = new System.Drawing.Size(155, 118);
 			this.group1.TabIndex = 34;
@@ -706,7 +751,7 @@ namespace kalk
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(414, 356);
+			this.ClientSize = new System.Drawing.Size(837, 410);
 			this.Controls.Add(this.tabControl1);
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

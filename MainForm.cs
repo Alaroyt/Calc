@@ -522,6 +522,10 @@ namespace kalk
 				}
 			}
 		}
+		void TabPage2Click(object sender, EventArgs e)
+		{
+	
+		}
 
 
 	}
