@@ -31,8 +31,8 @@ namespace kalk
 				Height = 395;
 			}
 			if (tabControl1.SelectedIndex == 1) {
-				Width = 560;
-				Height = 247;
+				Width = 558;
+				Height = 243;
 //				Width = 782;
 //				Height = 449;
 			}
@@ -324,13 +324,14 @@ namespace kalk
 		}
 		void ReadOnlyForBoard()
 		{
-			
+			names.Text="Выберите систему счисления";
 			BoardDigit.Text = "";
 			BoardDigit.ReadOnly = true;
 			
 		}
 		void FromBinCheckedChanged(object sender, EventArgs e)
 		{ 
+			names.Text="Введите число";
 			if (FromBin.Checked) {
 				CheckIsNeedReadOnly();
 				FromOctal.Enabled = false;
@@ -389,54 +390,61 @@ namespace kalk
 		void BoardTextChanged(object sender, EventArgs e)
 		{
 			if (BoardDigit.Text != "") {
-					try {
-						if (FromBin.Checked) {
-							try {
+				try {
+					if (FromBin.Checked) {
+						try {
 								
-									rank1.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 2), 2);
-									rank2.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 2), 8);
-									rank3.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 2), 10);
-									rank4.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 2), 16);
+							rank1.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 2), 2);
+							rank2.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 2), 8);
+							rank3.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 2), 10);
+							rank4.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 2), 16);
 							
-							} catch {
-								throw new Exception("Введенный символ не является двоичным, либо число больше числового диапазона типа (long)");
-							}
+						} catch {
+							throw new Exception("Введенный символ не является двоичным, либо число больше числового диапазона типа (long)");
 						}
-						if (FromOctal.Checked) {
-							try {
-									rank1.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 8), 2);
-									rank2.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 8), 8);
-									rank3.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 8), 10);
-									rank4.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 8), 16);
-							} catch {
-								throw new Exception("Введенный символ не является восьмиричным, либо число больше числового диапазона типа (long)");
-							}
-						}
-						if (FromDecimal.Checked) {
-							try {
-									rank1.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text), 2);
-									rank2.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text), 8);
-									rank3.Text = Convert.ToInt64(BoardDigit.Text).ToString();// написано по-индусски, чтобы выбрасывало ошибку если в строке символ
-									rank4.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text), 16);
-							} catch {
-								throw new Exception("Введенный символ не является числом, либо число больше числового диапазона типа (long)");
-							}
-						}
-						if (FromHexaDecimal.Checked) {
-							try {
-									rank1.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 16), 2);
-									rank2.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 16), 8);
-									rank3.Text = Convert.ToInt64(BoardDigit.Text, 16).ToString();
-									rank4.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 16), 16);// написано по-индусски, чтобы выбрасывало ошибку, если число не шестнадцатиричное
-							} catch {
-								throw new Exception("Введенный символ не является шестнадцатиричным, либо число больше числового диапазона типа (long)");
-							}
-						}
-					} catch (Exception ex) {
-						BoardDigit.Text = BoardDigit.Text.Remove(BoardDigit.Text.Length - 1, 1);
-						MessageBox.Show(ex.Message, "Achtung");
 					}
-			}}
+					if (FromOctal.Checked) {
+						try {
+							rank1.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 8), 2);
+							rank2.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 8), 8);
+							rank3.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 8), 10);
+							rank4.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 8), 16);
+						} catch {
+							throw new Exception("Введенный символ не является восьмиричным, либо число больше числового диапазона типа (long)");
+						}
+					}
+					if (FromDecimal.Checked) {
+						try {
+							rank1.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text), 2);
+							rank2.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text), 8);
+							rank3.Text = Convert.ToInt64(BoardDigit.Text).ToString();// написано по-индусски, чтобы выбрасывало ошибку если в строке символ
+							rank4.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text), 16);
+						} catch {
+							throw new Exception("Введенный символ не является числом, либо число больше числового диапазона типа (long)");
+						}
+					}
+					if (FromHexaDecimal.Checked) {
+						try {
+							rank1.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 16), 2);
+							rank2.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 16), 8);
+							rank3.Text = Convert.ToInt64(BoardDigit.Text, 16).ToString();
+							rank4.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 16), 16);// написано по-индусски, чтобы выбрасывало ошибку, если число не шестнадцатиричное
+						} catch {
+							throw new Exception("Введенный символ не является шестнадцатиричным, либо число больше числового диапазона типа (long)");
+						}
+					}
+				} catch (Exception ex) {
+					BoardDigit.Text = BoardDigit.Text.Remove(BoardDigit.Text.Length - 1, 1);
+					MessageBox.Show(ex.Message, "Achtung");
+				}
+			} else {
+				Board.Text = "";
+				rank1.Text = "";
+				rank2.Text = "";
+				rank3.Text = "";
+				rank4.Text = "";
+			}
+		}
 		
 		void divOnX(object sender, EventArgs e)
 		{

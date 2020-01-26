@@ -40,7 +40,7 @@ namespace kalk
 		private System.Windows.Forms.CheckBox FromOctal;
 		private System.Windows.Forms.CheckBox FromBin;
 		public System.Windows.Forms.TextBox BoardDigit;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label names;
 		private System.Windows.Forms.Button button22;
 		private System.Windows.Forms.Button button17;
 		private System.Windows.Forms.Button button16;
@@ -128,7 +128,7 @@ namespace kalk
 			this.BoardDigit = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.rank4 = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
+			this.names = new System.Windows.Forms.Label();
 			this.rank3 = new System.Windows.Forms.TextBox();
 			this.rank1 = new System.Windows.Forms.TextBox();
 			this.rank2 = new System.Windows.Forms.TextBox();
@@ -557,7 +557,7 @@ namespace kalk
 			this.tabPage2.Controls.Add(this.BoardDigit);
 			this.tabPage2.Controls.Add(this.label2);
 			this.tabPage2.Controls.Add(this.rank4);
-			this.tabPage2.Controls.Add(this.label1);
+			this.tabPage2.Controls.Add(this.names);
 			this.tabPage2.Controls.Add(this.rank3);
 			this.tabPage2.Controls.Add(this.rank1);
 			this.tabPage2.Controls.Add(this.rank2);
@@ -571,7 +571,7 @@ namespace kalk
 			// 
 			// label5
 			// 
-			this.label5.Location = new System.Drawing.Point(164, 155);
+			this.label5.Location = new System.Drawing.Point(127, 151);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(38, 15);
 			this.label5.TabIndex = 7;
@@ -579,7 +579,7 @@ namespace kalk
 			// 
 			// label4
 			// 
-			this.label4.Location = new System.Drawing.Point(164, 135);
+			this.label4.Location = new System.Drawing.Point(127, 131);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(38, 12);
 			this.label4.TabIndex = 6;
@@ -591,9 +591,9 @@ namespace kalk
 			this.group1.Controls.Add(this.FromBin);
 			this.group1.Controls.Add(this.FromDecimal);
 			this.group1.Controls.Add(this.FromOctal);
-			this.group1.Location = new System.Drawing.Point(3, 62);
+			this.group1.Location = new System.Drawing.Point(3, 58);
 			this.group1.Name = "group1";
-			this.group1.Size = new System.Drawing.Size(155, 118);
+			this.group1.Size = new System.Drawing.Size(120, 118);
 			this.group1.TabIndex = 34;
 			this.group1.TabStop = false;
 			this.group1.Text = "Исходное число ";
@@ -640,7 +640,7 @@ namespace kalk
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(164, 115);
+			this.label3.Location = new System.Drawing.Point(127, 111);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(38, 15);
 			this.label3.TabIndex = 5;
@@ -648,17 +648,17 @@ namespace kalk
 			// 
 			// BoardDigit
 			// 
-			this.BoardDigit.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.BoardDigit.Location = new System.Drawing.Point(3, 29);
+			this.BoardDigit.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.BoardDigit.Location = new System.Drawing.Point(0, 29);
 			this.BoardDigit.Name = "BoardDigit";
 			this.BoardDigit.ReadOnly = true;
-			this.BoardDigit.Size = new System.Drawing.Size(507, 27);
+			this.BoardDigit.Size = new System.Drawing.Size(531, 23);
 			this.BoardDigit.TabIndex = 30;
 			this.BoardDigit.TextChanged += new System.EventHandler(this.BoardTextChanged);
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(164, 96);
+			this.label2.Location = new System.Drawing.Point(127, 92);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(38, 15);
 			this.label2.TabIndex = 4;
@@ -668,49 +668,49 @@ namespace kalk
 			// 
 			this.rank4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.rank4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.rank4.Location = new System.Drawing.Point(208, 153);
+			this.rank4.Location = new System.Drawing.Point(171, 149);
 			this.rank4.Name = "rank4";
 			this.rank4.ReadOnly = true;
-			this.rank4.Size = new System.Drawing.Size(326, 18);
+			this.rank4.Size = new System.Drawing.Size(360, 18);
 			this.rank4.TabIndex = 3;
 			// 
-			// label1
+			// names
 			// 
-			this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label1.Location = new System.Drawing.Point(3, 3);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(169, 23);
-			this.label1.TabIndex = 31;
-			this.label1.Text = "Введите число";
+			this.names.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.names.Location = new System.Drawing.Point(3, 3);
+			this.names.Name = "names";
+			this.names.Size = new System.Drawing.Size(335, 23);
+			this.names.TabIndex = 31;
+			this.names.Text = "Выберите систему счисления";
 			// 
 			// rank3
 			// 
 			this.rank3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.rank3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.rank3.Location = new System.Drawing.Point(208, 133);
+			this.rank3.Location = new System.Drawing.Point(171, 129);
 			this.rank3.Name = "rank3";
 			this.rank3.ReadOnly = true;
-			this.rank3.Size = new System.Drawing.Size(326, 18);
+			this.rank3.Size = new System.Drawing.Size(360, 18);
 			this.rank3.TabIndex = 2;
 			// 
 			// rank1
 			// 
 			this.rank1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.rank1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.rank1.Location = new System.Drawing.Point(208, 94);
+			this.rank1.Location = new System.Drawing.Point(171, 90);
 			this.rank1.Name = "rank1";
 			this.rank1.ReadOnly = true;
-			this.rank1.Size = new System.Drawing.Size(326, 18);
+			this.rank1.Size = new System.Drawing.Size(360, 18);
 			this.rank1.TabIndex = 0;
 			// 
 			// rank2
 			// 
 			this.rank2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.rank2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.rank2.Location = new System.Drawing.Point(208, 113);
+			this.rank2.Location = new System.Drawing.Point(171, 109);
 			this.rank2.Name = "rank2";
 			this.rank2.ReadOnly = true;
-			this.rank2.Size = new System.Drawing.Size(326, 18);
+			this.rank2.Size = new System.Drawing.Size(360, 18);
 			this.rank2.TabIndex = 1;
 			// 
 			// calculatorByPrusov
