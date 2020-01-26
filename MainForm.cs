@@ -324,14 +324,14 @@ namespace kalk
 		}
 		void ReadOnlyForBoard()
 		{
-			names.Text="Выберите систему счисления";
+			names.Text = "Выберите систему счисления";
 			BoardDigit.Text = "";
 			BoardDigit.ReadOnly = true;
 			
 		}
 		void FromBinCheckedChanged(object sender, EventArgs e)
 		{ 
-			names.Text="Введите число";
+			names.Text = "Введите число";
 			if (FromBin.Checked) {
 				CheckIsNeedReadOnly();
 				FromOctal.Enabled = false;
