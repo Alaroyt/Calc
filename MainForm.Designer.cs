@@ -34,12 +34,6 @@ namespace kalk
 		private System.Windows.Forms.TabControl tabControl1;
 		private System.Windows.Forms.TabPage tabPage1;
 		private System.Windows.Forms.TabPage tabPage2;
-		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.CheckBox ToHexaDecimal;
-		private System.Windows.Forms.CheckBox ToDecimal;
-		private System.Windows.Forms.CheckBox ToOctal;
-		private System.Windows.Forms.CheckBox ToBinary;
-		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.GroupBox group1;
 		private System.Windows.Forms.CheckBox FromHexaDecimal;
 		private System.Windows.Forms.CheckBox FromDecimal;
@@ -47,7 +41,6 @@ namespace kalk
 		private System.Windows.Forms.CheckBox FromBin;
 		public System.Windows.Forms.TextBox BoardDigit;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.TextBox Result;
 		private System.Windows.Forms.Button button22;
 		private System.Windows.Forms.Button button17;
 		private System.Windows.Forms.Button button16;
@@ -57,16 +50,14 @@ namespace kalk
 		private System.Windows.Forms.Button button30;
 		private System.Windows.Forms.Button button27;
 		private System.Windows.Forms.Button button28;
-		private System.Windows.Forms.Label rank1;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.TextBox rank1;
+		private System.Windows.Forms.TextBox rank4;
+		private System.Windows.Forms.TextBox rank2;
+		private System.Windows.Forms.TextBox rank3;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.GroupBox groupBox2;
-		private System.Windows.Forms.Label rank4;
-		private System.Windows.Forms.Label rank2;
-		private System.Windows.Forms.Label rank3;
-		private System.Windows.Forms.CheckBox _choose;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label label2;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -126,35 +117,24 @@ namespace kalk
 			this.button15 = new System.Windows.Forms.Button();
 			this.button13 = new System.Windows.Forms.Button();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.rank4 = new System.Windows.Forms.Label();
-			this.rank1 = new System.Windows.Forms.Label();
-			this.rank2 = new System.Windows.Forms.Label();
-			this.rank3 = new System.Windows.Forms.Label();
-			this._choose = new System.Windows.Forms.CheckBox();
-			this.label3 = new System.Windows.Forms.Label();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.ToHexaDecimal = new System.Windows.Forms.CheckBox();
-			this.ToBinary = new System.Windows.Forms.CheckBox();
-			this.ToOctal = new System.Windows.Forms.CheckBox();
-			this.ToDecimal = new System.Windows.Forms.CheckBox();
-			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
-			this.label6 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
 			this.group1 = new System.Windows.Forms.GroupBox();
 			this.FromHexaDecimal = new System.Windows.Forms.CheckBox();
 			this.FromBin = new System.Windows.Forms.CheckBox();
 			this.FromDecimal = new System.Windows.Forms.CheckBox();
 			this.FromOctal = new System.Windows.Forms.CheckBox();
+			this.label3 = new System.Windows.Forms.Label();
 			this.BoardDigit = new System.Windows.Forms.TextBox();
+			this.label2 = new System.Windows.Forms.Label();
+			this.rank4 = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
-			this.Result = new System.Windows.Forms.TextBox();
+			this.rank3 = new System.Windows.Forms.TextBox();
+			this.rank1 = new System.Windows.Forms.TextBox();
+			this.rank2 = new System.Windows.Forms.TextBox();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
-			this.groupBox2.SuspendLayout();
-			this.groupBox1.SuspendLayout();
 			this.group1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -424,7 +404,7 @@ namespace kalk
 			this.tabControl1.Location = new System.Drawing.Point(0, 0);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(522, 419);
+			this.tabControl1.Size = new System.Drawing.Size(649, 419);
 			this.tabControl1.TabIndex = 29;
 			this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.TabContro1SelectedIndexChanged);
 			// 
@@ -466,7 +446,7 @@ namespace kalk
 			this.tabPage1.Location = new System.Drawing.Point(4, 22);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(514, 393);
+			this.tabPage1.Size = new System.Drawing.Size(641, 393);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "Calculator";
 			this.tabPage1.UseVisualStyleBackColor = true;
@@ -479,6 +459,7 @@ namespace kalk
 			this.button29.Size = new System.Drawing.Size(41, 35);
 			this.button29.TabIndex = 37;
 			this.button29.UseVisualStyleBackColor = true;
+			this.button29.Visible = false;
 			// 
 			// button30
 			// 
@@ -488,6 +469,7 @@ namespace kalk
 			this.button30.Size = new System.Drawing.Size(41, 35);
 			this.button30.TabIndex = 36;
 			this.button30.UseVisualStyleBackColor = true;
+			this.button30.Visible = false;
 			// 
 			// button27
 			// 
@@ -497,6 +479,7 @@ namespace kalk
 			this.button27.Size = new System.Drawing.Size(41, 35);
 			this.button27.TabIndex = 35;
 			this.button27.UseVisualStyleBackColor = true;
+			this.button27.Visible = false;
 			// 
 			// button28
 			// 
@@ -506,6 +489,7 @@ namespace kalk
 			this.button28.Size = new System.Drawing.Size(41, 35);
 			this.button28.TabIndex = 34;
 			this.button28.UseVisualStyleBackColor = true;
+			this.button28.Visible = false;
 			// 
 			// button22
 			// 
@@ -566,173 +550,40 @@ namespace kalk
 			// 
 			// tabPage2
 			// 
-			this.tabPage2.Controls.Add(this.groupBox2);
-			this.tabPage2.Controls.Add(this._choose);
-			this.tabPage2.Controls.Add(this.label3);
-			this.tabPage2.Controls.Add(this.groupBox1);
-			this.tabPage2.Controls.Add(this.label4);
 			this.tabPage2.Controls.Add(this.label5);
-			this.tabPage2.Controls.Add(this.label6);
-			this.tabPage2.Controls.Add(this.label2);
+			this.tabPage2.Controls.Add(this.label4);
 			this.tabPage2.Controls.Add(this.group1);
+			this.tabPage2.Controls.Add(this.label3);
 			this.tabPage2.Controls.Add(this.BoardDigit);
+			this.tabPage2.Controls.Add(this.label2);
+			this.tabPage2.Controls.Add(this.rank4);
 			this.tabPage2.Controls.Add(this.label1);
-			this.tabPage2.Controls.Add(this.Result);
+			this.tabPage2.Controls.Add(this.rank3);
+			this.tabPage2.Controls.Add(this.rank1);
+			this.tabPage2.Controls.Add(this.rank2);
 			this.tabPage2.Location = new System.Drawing.Point(4, 22);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(514, 393);
+			this.tabPage2.Size = new System.Drawing.Size(641, 393);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "DigitSystemConverter";
 			this.tabPage2.UseVisualStyleBackColor = true;
 			// 
-			// groupBox2
+			// label5
 			// 
-			this.groupBox2.Controls.Add(this.rank4);
-			this.groupBox2.Controls.Add(this.rank1);
-			this.groupBox2.Controls.Add(this.rank2);
-			this.groupBox2.Controls.Add(this.rank3);
-			this.groupBox2.Location = new System.Drawing.Point(210, 280);
-			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(157, 118);
-			this.groupBox2.TabIndex = 35;
-			this.groupBox2.TabStop = false;
-			this.groupBox2.Text = "Результат";
-			// 
-			// rank4
-			// 
-			this.rank4.Location = new System.Drawing.Point(6, 81);
-			this.rank4.Name = "rank4";
-			this.rank4.Size = new System.Drawing.Size(169, 13);
-			this.rank4.TabIndex = 50;
-			this.rank4.Text = "0000  0000  0000  0000";
-			// 
-			// rank1
-			// 
-			this.rank1.Location = new System.Drawing.Point(6, 22);
-			this.rank1.Name = "rank1";
-			this.rank1.Size = new System.Drawing.Size(169, 13);
-			this.rank1.TabIndex = 37;
-			this.rank1.Text = "0000  0000  0000  0000";
-			// 
-			// rank2
-			// 
-			this.rank2.Location = new System.Drawing.Point(6, 41);
-			this.rank2.Name = "rank2";
-			this.rank2.Size = new System.Drawing.Size(169, 13);
-			this.rank2.TabIndex = 48;
-			this.rank2.Text = "0000  0000  0000  0000";
-			// 
-			// rank3
-			// 
-			this.rank3.Location = new System.Drawing.Point(6, 61);
-			this.rank3.Name = "rank3";
-			this.rank3.Size = new System.Drawing.Size(169, 13);
-			this.rank3.TabIndex = 49;
-			this.rank3.Text = "0000  0000  0000  0000";
-			// 
-			// _choose
-			// 
-			this._choose.Location = new System.Drawing.Point(11, 280);
-			this._choose.Name = "_choose";
-			this._choose.Size = new System.Drawing.Size(149, 24);
-			this._choose.TabIndex = 51;
-			this._choose.Text = "Упрощённый режим";
-			this._choose.UseVisualStyleBackColor = true;
-			// 
-			// label3
-			// 
-			this.label3.Location = new System.Drawing.Point(105, 328);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(38, 13);
-			this.label3.TabIndex = 47;
-			this.label3.Text = "0000";
-			// 
-			// groupBox1
-			// 
-			this.groupBox1.Controls.Add(this.ToHexaDecimal);
-			this.groupBox1.Controls.Add(this.ToBinary);
-			this.groupBox1.Controls.Add(this.ToOctal);
-			this.groupBox1.Controls.Add(this.ToDecimal);
-			this.groupBox1.Location = new System.Drawing.Point(257, 86);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(155, 118);
-			this.groupBox1.TabIndex = 35;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Результат представить в";
-			// 
-			// ToHexaDecimal
-			// 
-			this.ToHexaDecimal.Location = new System.Drawing.Point(6, 88);
-			this.ToHexaDecimal.Name = "ToHexaDecimal";
-			this.ToHexaDecimal.Size = new System.Drawing.Size(149, 24);
-			this.ToHexaDecimal.TabIndex = 3;
-			this.ToHexaDecimal.Text = "Шестнадцатиричной";
-			this.ToHexaDecimal.UseVisualStyleBackColor = true;
-			this.ToHexaDecimal.CheckedChanged += new System.EventHandler(this.ToHexaDecimalCheckedChanged);
-			// 
-			// ToBinary
-			// 
-			this.ToBinary.Location = new System.Drawing.Point(6, 29);
-			this.ToBinary.Name = "ToBinary";
-			this.ToBinary.Size = new System.Drawing.Size(104, 24);
-			this.ToBinary.TabIndex = 0;
-			this.ToBinary.Text = "Двоичной";
-			this.ToBinary.UseVisualStyleBackColor = true;
-			this.ToBinary.CheckedChanged += new System.EventHandler(this.ToBinaryCheckedChanged);
-			// 
-			// ToOctal
-			// 
-			this.ToOctal.Location = new System.Drawing.Point(6, 48);
-			this.ToOctal.Name = "ToOctal";
-			this.ToOctal.Size = new System.Drawing.Size(116, 24);
-			this.ToOctal.TabIndex = 1;
-			this.ToOctal.Text = "Восьмиричной";
-			this.ToOctal.UseVisualStyleBackColor = true;
-			this.ToOctal.CheckedChanged += new System.EventHandler(this.ToOctalCheckedChanged);
-			// 
-			// ToDecimal
-			// 
-			this.ToDecimal.Location = new System.Drawing.Point(6, 68);
-			this.ToDecimal.Name = "ToDecimal";
-			this.ToDecimal.Size = new System.Drawing.Size(104, 24);
-			this.ToDecimal.TabIndex = 2;
-			this.ToDecimal.Text = "Десятичной";
-			this.ToDecimal.UseVisualStyleBackColor = true;
-			this.ToDecimal.CheckedChanged += new System.EventHandler(this.ToDecimalCheckedChanged);
+			this.label5.Location = new System.Drawing.Point(164, 155);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(38, 15);
+			this.label5.TabIndex = 7;
+			this.label5.Text = "Hex";
 			// 
 			// label4
 			// 
-			this.label4.Location = new System.Drawing.Point(149, 328);
+			this.label4.Location = new System.Drawing.Point(164, 135);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(40, 13);
-			this.label4.TabIndex = 46;
-			this.label4.Text = "0000";
-			// 
-			// label5
-			// 
-			this.label5.Location = new System.Drawing.Point(17, 328);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(38, 13);
-			this.label5.TabIndex = 45;
-			this.label5.Text = "0000";
-			// 
-			// label6
-			// 
-			this.label6.Location = new System.Drawing.Point(61, 328);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(40, 13);
-			this.label6.TabIndex = 44;
-			this.label6.Text = "0000";
-			// 
-			// label2
-			// 
-			this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label2.Location = new System.Drawing.Point(257, 14);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(169, 23);
-			this.label2.TabIndex = 33;
-			this.label2.Text = "Результат";
+			this.label4.Size = new System.Drawing.Size(38, 12);
+			this.label4.TabIndex = 6;
+			this.label4.Text = "Dec";
 			// 
 			// group1
 			// 
@@ -740,12 +591,12 @@ namespace kalk
 			this.group1.Controls.Add(this.FromBin);
 			this.group1.Controls.Add(this.FromDecimal);
 			this.group1.Controls.Add(this.FromOctal);
-			this.group1.Location = new System.Drawing.Point(11, 86);
+			this.group1.Location = new System.Drawing.Point(3, 62);
 			this.group1.Name = "group1";
 			this.group1.Size = new System.Drawing.Size(155, 118);
 			this.group1.TabIndex = 34;
 			this.group1.TabStop = false;
-			this.group1.Text = "Исходное число";
+			this.group1.Text = "Исходное число ";
 			// 
 			// FromHexaDecimal
 			// 
@@ -787,39 +638,87 @@ namespace kalk
 			this.FromOctal.UseVisualStyleBackColor = true;
 			this.FromOctal.CheckedChanged += new System.EventHandler(this.FromOctalCheckedChanged);
 			// 
+			// label3
+			// 
+			this.label3.Location = new System.Drawing.Point(164, 115);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(38, 15);
+			this.label3.TabIndex = 5;
+			this.label3.Text = "Octal";
+			// 
 			// BoardDigit
 			// 
-			this.BoardDigit.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.BoardDigit.Location = new System.Drawing.Point(11, 40);
+			this.BoardDigit.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.BoardDigit.Location = new System.Drawing.Point(3, 29);
 			this.BoardDigit.Name = "BoardDigit";
 			this.BoardDigit.ReadOnly = true;
-			this.BoardDigit.Size = new System.Drawing.Size(240, 27);
+			this.BoardDigit.Size = new System.Drawing.Size(507, 27);
 			this.BoardDigit.TabIndex = 30;
 			this.BoardDigit.TextChanged += new System.EventHandler(this.BoardTextChanged);
+			// 
+			// label2
+			// 
+			this.label2.Location = new System.Drawing.Point(164, 96);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(38, 15);
+			this.label2.TabIndex = 4;
+			this.label2.Text = "Bin";
+			// 
+			// rank4
+			// 
+			this.rank4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.rank4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.rank4.Location = new System.Drawing.Point(208, 153);
+			this.rank4.Name = "rank4";
+			this.rank4.ReadOnly = true;
+			this.rank4.Size = new System.Drawing.Size(326, 18);
+			this.rank4.TabIndex = 3;
 			// 
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label1.Location = new System.Drawing.Point(11, 14);
+			this.label1.Location = new System.Drawing.Point(3, 3);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(169, 23);
 			this.label1.TabIndex = 31;
 			this.label1.Text = "Введите число";
 			// 
-			// Result
+			// rank3
 			// 
-			this.Result.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.Result.Location = new System.Drawing.Point(257, 40);
-			this.Result.Name = "Result";
-			this.Result.ReadOnly = true;
-			this.Result.Size = new System.Drawing.Size(240, 27);
-			this.Result.TabIndex = 32;
+			this.rank3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.rank3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.rank3.Location = new System.Drawing.Point(208, 133);
+			this.rank3.Name = "rank3";
+			this.rank3.ReadOnly = true;
+			this.rank3.Size = new System.Drawing.Size(326, 18);
+			this.rank3.TabIndex = 2;
+			// 
+			// rank1
+			// 
+			this.rank1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.rank1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.rank1.Location = new System.Drawing.Point(208, 94);
+			this.rank1.Name = "rank1";
+			this.rank1.ReadOnly = true;
+			this.rank1.Size = new System.Drawing.Size(326, 18);
+			this.rank1.TabIndex = 0;
+			// 
+			// rank2
+			// 
+			this.rank2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.rank2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.rank2.Location = new System.Drawing.Point(208, 113);
+			this.rank2.Name = "rank2";
+			this.rank2.ReadOnly = true;
+			this.rank2.Size = new System.Drawing.Size(326, 18);
+			this.rank2.TabIndex = 1;
 			// 
 			// calculatorByPrusov
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(530, 410);
+			this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.ClientSize = new System.Drawing.Size(550, 369);
 			this.Controls.Add(this.tabControl1);
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -833,8 +732,6 @@ namespace kalk
 			this.tabPage1.PerformLayout();
 			this.tabPage2.ResumeLayout(false);
 			this.tabPage2.PerformLayout();
-			this.groupBox2.ResumeLayout(false);
-			this.groupBox1.ResumeLayout(false);
 			this.group1.ResumeLayout(false);
 			this.ResumeLayout(false);
 

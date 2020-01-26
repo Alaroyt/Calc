@@ -21,19 +21,19 @@ namespace kalk
 
 			MaximizeBox = false;
 
-			Width = 420;
+			Width = 428;
 			Height = 395;
 		}
 		void TabContro1SelectedIndexChanged(object sender, EventArgs e)// Если вкладки переключаются, размеры формы меняются
 		{
 			if (tabControl1.SelectedIndex == 0) {
-				Width = 420;
+				Width = 428;
 				Height = 395;
 			}
 			if (tabControl1.SelectedIndex == 1) {
-				Width = 523;
-				Height = 273;
-//.				Width = 546;
+				Width = 560;
+				Height = 247;
+//				Width = 782;
 //				Height = 449;
 			}
 		}
@@ -320,16 +320,17 @@ namespace kalk
 
 		void CheckIsNeedReadOnly()
 		{
-			BoardDigit.ReadOnly &= !((FromBin.Checked | FromOctal.Checked | FromDecimal.Checked | FromHexaDecimal.Checked) & (ToBinary.Checked | ToOctal.Checked | ToDecimal.Checked | ToHexaDecimal.Checked));
+			BoardDigit.ReadOnly &= !((FromBin.Checked | FromOctal.Checked | FromDecimal.Checked | FromHexaDecimal.Checked));
 		}
 		void ReadOnlyForBoard()
 		{
+			
 			BoardDigit.Text = "";
 			BoardDigit.ReadOnly = true;
-
+			
 		}
 		void FromBinCheckedChanged(object sender, EventArgs e)
-		{
+		{ 
 			if (FromBin.Checked) {
 				CheckIsNeedReadOnly();
 				FromOctal.Enabled = false;
@@ -385,136 +386,58 @@ namespace kalk
 				FromDecimal.Enabled = true;
 			}
 		}
-		void ToBinaryCheckedChanged(object sender, EventArgs e)
-		{
-			if (ToBinary.Checked) {
-				CheckIsNeedReadOnly();
-				ToOctal.Enabled = false;
-				ToDecimal.Enabled = false;
-				ToHexaDecimal.Enabled = false;
-			} else {
-				ReadOnlyForBoard();
-				ToOctal.Enabled = true;
-				ToDecimal.Enabled = true;
-				ToHexaDecimal.Enabled = true;
-			}
-		}
-		void ToOctalCheckedChanged(object sender, EventArgs e)
-		{
-			if (ToOctal.Checked) {
-				CheckIsNeedReadOnly();
-				ToBinary.Enabled = false;
-				ToDecimal.Enabled = false;
-				ToHexaDecimal.Enabled = false;
-			} else {
-				ReadOnlyForBoard();
-				ToBinary.Enabled = true;
-				ToDecimal.Enabled = true;
-				ToHexaDecimal.Enabled = true;
-			}
-		}
-		void ToDecimalCheckedChanged(object sender, EventArgs e)
-		{
-			if (ToDecimal.Checked) {
-				CheckIsNeedReadOnly();
-				ToBinary.Enabled = false;
-				ToOctal.Enabled = false;
-				ToHexaDecimal.Enabled = false;
-			} else {
-				ReadOnlyForBoard();
-				ToBinary.Enabled = true;
-				ToOctal.Enabled = true;
-				ToHexaDecimal.Enabled = true;
-			}
-		}
-		void ToHexaDecimalCheckedChanged(object sender, EventArgs e)
-		{
-			if (ToHexaDecimal.Checked) {
-				CheckIsNeedReadOnly();
-				ToBinary.Enabled = false;
-				ToOctal.Enabled = false;
-				ToDecimal.Enabled = false;
-			} else {
-				ReadOnlyForBoard();
-				ToBinary.Enabled = true;
-				ToOctal.Enabled = true;
-				ToDecimal.Enabled = true;
-			}
-		}
 		void BoardTextChanged(object sender, EventArgs e)
 		{
 			if (BoardDigit.Text != "") {
-				try {
-					if (FromBin.Checked) {
-						try {
-							if (ToBinary.Checked)
-								Result.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 2), 2);
-							if (ToOctal.Checked)
-								Result.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 2), 8);
-							if (ToDecimal.Checked)
-								Result.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 2), 10);
-							if (ToHexaDecimal.Checked)
-								Result.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 2), 16);
+					try {
+						if (FromBin.Checked) {
+							try {
+								
+									rank1.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 2), 2);
+									rank2.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 2), 8);
+									rank3.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 2), 10);
+									rank4.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 2), 16);
 							
-						} catch {
-							
-							throw new Exception("Введенный символ не является двоичным, либо число больше числового диапазона типа (long)");
+							} catch {
+								throw new Exception("Введенный символ не является двоичным, либо число больше числового диапазона типа (long)");
+							}
 						}
-					}
-					if (FromOctal.Checked) {
-						try {
-							if (ToBinary.Checked)
-								Result.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 8), 2);
-							if (ToOctal.Checked)
-								Result.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 8), 8);
-							if (ToDecimal.Checked)
-								Result.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 8), 10);
-//									Result.Text = WorkWithDigit.OctToDec(BoardDigit.Text).ToString();
-							if (ToHexaDecimal.Checked)
-								Result.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 8), 16);
-//									Result.Text = Convert.ToString(WorkWithDigit.OctToDec(BoardDigit.Text), 16);
-						} catch {
-							throw new Exception("Введенный символ не является восьмиричным, либо число больше числового диапазона типа (long)");
+						if (FromOctal.Checked) {
+							try {
+									rank1.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 8), 2);
+									rank2.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 8), 8);
+									rank3.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 8), 10);
+									rank4.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 8), 16);
+							} catch {
+								throw new Exception("Введенный символ не является восьмиричным, либо число больше числового диапазона типа (long)");
+							}
 						}
-					}
-					if (FromDecimal.Checked) {
-						try {
-							if (ToBinary.Checked)
-								Result.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text), 2);
-							if (ToOctal.Checked)
-								Result.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text), 8);
-							if (ToDecimal.Checked)
-								Result.Text = Convert.ToInt64(BoardDigit.Text).ToString();// написано по-индусски, чтобы выбрасывало ошибку если в строке символ
-							if (ToHexaDecimal.Checked)
-								Result.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text), 16);
-						} catch {
-							throw new Exception("Введенный символ не является числом, либо число больше числового диапазона типа (long)");
+						if (FromDecimal.Checked) {
+							try {
+									rank1.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text), 2);
+									rank2.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text), 8);
+									rank3.Text = Convert.ToInt64(BoardDigit.Text).ToString();// написано по-индусски, чтобы выбрасывало ошибку если в строке символ
+									rank4.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text), 16);
+							} catch {
+								throw new Exception("Введенный символ не является числом, либо число больше числового диапазона типа (long)");
+							}
 						}
-					}
-					if (FromHexaDecimal.Checked) {
-						try {
-							if (ToBinary.Checked)
-								Result.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 16), 2);
-//									Result.Text = Convert.ToString(WorkWithDigit.HexToDec(Board.Text), 2);
-							if (ToOctal.Checked)
-								Result.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 16), 8);
-//									Result.Text = Convert.ToString(WorkWithDigit.HexToDec(Board.Text), 8);
-							if (ToDecimal.Checked)
-								Result.Text = Convert.ToInt64(BoardDigit.Text, 16).ToString();
-//									Result.Text = WorkWithDigit.HexToDec(Board.Text).ToString();
-							if (ToHexaDecimal.Checked)
-								Result.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 16), 16);// написано по-индусски, чтобы выбрасывало ошибку, если число не шестнадцатиричное
-						} catch {
-							throw new Exception("Введенный символ не является шестнадцатиричным, либо число больше числового диапазона типа (long)");
+						if (FromHexaDecimal.Checked) {
+							try {
+									rank1.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 16), 2);
+									rank2.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 16), 8);
+									rank3.Text = Convert.ToInt64(BoardDigit.Text, 16).ToString();
+									rank4.Text = Convert.ToString(Convert.ToInt64(BoardDigit.Text, 16), 16);// написано по-индусски, чтобы выбрасывало ошибку, если число не шестнадцатиричное
+							} catch {
+								throw new Exception("Введенный символ не является шестнадцатиричным, либо число больше числового диапазона типа (long)");
+							}
 						}
+					} catch (Exception ex) {
+						BoardDigit.Text = BoardDigit.Text.Remove(BoardDigit.Text.Length - 1, 1);
+						MessageBox.Show(ex.Message, "Achtung");
 					}
-				} catch (Exception ex) {
-					BoardDigit.Text = BoardDigit.Text.Remove(BoardDigit.Text.Length - 1, 1);
-					MessageBox.Show(ex.Message, "Achtung");
-				}
-			} else
-				Result.Text = "";
-		}
+			}}
+		
 		void divOnX(object sender, EventArgs e)
 		{
 			if (Board.Text != "") {
