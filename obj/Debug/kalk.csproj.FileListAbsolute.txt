@@ -12,11 +12,10 @@ C:\Users\cd\Documents\SharpDevelop Projects\kalk\obj\Debug\kalk.csproj.GenerateR
 C:\Users\cd\Documents\SharpDevelop Projects\kalk\obj\Debug\kalk.exe
 C:\Users\cd\Documents\SharpDevelop Projects\kalk\obj\Debug\kalk.pdb
 C:\Users\cd\Documents\SharpDevelop Projects\kalk\obj\Debug\kalk.csprojResolveAssemblyReference.cache
-C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\bin\Debug\kalk.exe
-C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\bin\Debug\kalk.pdb
-C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\obj\Debug\kalk.csprojResolveAssemblyReference.cache
 C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\obj\Debug\kalk.calculatorByPrusov.resources
 C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\obj\Debug\kalk.csproj.GenerateResource.Cache
-C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\obj\Debug\kalk.exe
-C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\obj\Debug\kalk.pdb
-C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\bin\Debug\kalk.exe.config
+C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\bin\Debug\Calc.exe.config
+C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\bin\Debug\Calc.exe
+C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\bin\Debug\Calc.pdb
+C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\obj\Debug\Calc.exe
+C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\obj\Debug\Calc.pdb

@@ -327,7 +327,6 @@ namespace kalk
 			names.Text = "Выберите систему счисления";
 			BoardDigit.Text = "";
 			BoardDigit.ReadOnly = true;
-			
 		}
 		void FromBinCheckedChanged(object sender, EventArgs e)
 		{ 
@@ -346,6 +345,7 @@ namespace kalk
 		}
 		void FromOctalCheckedChanged(object sender, EventArgs e)
 		{
+			names.Text = "Введите число";
 			if (FromOctal.Checked) {
 				CheckIsNeedReadOnly();
 				FromBin.Enabled = false;
@@ -361,6 +361,7 @@ namespace kalk
 		}
 		void FromDecimalCheckedChanged(object sender, EventArgs e)
 		{
+			names.Text = "Введите число";
 			if (FromDecimal.Checked) {
 				CheckIsNeedReadOnly();
 				FromBin.Enabled = false;
@@ -375,6 +376,7 @@ namespace kalk
 		}
 		void FromHexaDecimalCheckedChanged(object sender, EventArgs e)
 		{
+			names.Text = "Введите число";
 			if (FromHexaDecimal.Checked) {
 				CheckIsNeedReadOnly();
 				FromBin.Enabled = false;
