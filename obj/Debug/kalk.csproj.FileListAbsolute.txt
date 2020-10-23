@@ -19,3 +19,4 @@ C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\bin\Debug\Calc.exe
 C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\bin\Debug\Calc.pdb
 C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\obj\Debug\Calc.exe
 C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\obj\Debug\Calc.pdb
+C:\Users\cd\Documents\SharpDevelop Projects\GitProj\kalk\obj\Debug\kalk.csprojResolveAssemblyReference.cache

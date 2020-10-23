@@ -1,14 +1,12 @@
-﻿// (Board.Text == "") - проверка на пустоту текстБокса
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using System.Text.RegularExpressions;
 namespace kalk
 {
 	static class Calculated
 	{
 		public static List<double> digits = new List<double>();
-
+		
 		public static List<char> operand = new List<char>();
 
 		public static string Factorial(string value)
@@ -21,9 +19,12 @@ namespace kalk
 			}
 			return temp.ToString();
 		}
-
-		public static string Kalk(string line)// Мой строчный калькулятор
-
+		/// <summary>
+		/// Решает математическое выражение в заданной строке
+		/// </summary>
+		/// <param name="line"> математическое выражение </param>
+		/// <returns> ответ </returns>
+		public static string SolveString(string line)
 		{
 			try {
 				ParsingString(line);
@@ -33,20 +34,17 @@ namespace kalk
 							operand.RemoveAt(i);
 							digits[i] *= digits[i + 1];
 							digits.RemoveAt(i + 1);
-						}
-						else if (operand[i] == '/') {
+						} else if (operand[i] == '/') {
 							operand.RemoveAt(i);
 							digits[i] /= digits[i + 1];
 							digits.RemoveAt(i + 1);
-						}
-						else
+						} else
 							i++;
 					}
 				}
 				if (digits.Count == 1) {
 					return digits[0].ToString();
-				}
-				else {
+				} else {
 					double amount = 0;
 					amount = operand[0] == '+' ? (digits[0] + digits[1]) : (digits[0] - digits[1]);
 					for (int o = 2, i = 1; i <= operand.Count - 1; i++, o++) {
@@ -54,32 +52,32 @@ namespace kalk
 					}
 					return amount.ToString();
 				}
-			}
-			catch {
-				MessageBox.Show("произошла ошибОчка в _Calculated.main()", "Achtung");
-				return "";
-			}
-			finally {
+			} catch {
+				MessageBox.Show("Something wrong", "Achtung");
+				return null;
+			} finally {
 				digits.Clear();
 				operand.Clear();
 			}
 		}
 
-		static void ParsingString(string line)//разбор строки на числа (List digits) и операнды(+,-,*,/)(List operand)
-
+		/// <summary>
+		/// Разбор строки математическое выражение на операнды и числа между ними (парсер)
+		/// </summary>
+		/// <param name="line"> математическое выражение </param>
+		static void ParsingString(string line)
 		{
 			string str = line;
 			char[] mas = str.ToCharArray();
 			for (int i = 0; i <= mas.Length - 1; i++) {
 				if (mas[i] == '(') {
 					List<char> tempDigit = new List<char>();
-					for (int _i = i + 1; ; _i++) {
+					for (int _i = i + 1;; _i++) {
 						if (mas[_i] == ')') {
 							if (i != mas.Length - 1)
 								i++;
 							break;
-						}
-						else {
+						} else {
 							tempDigit.Add(mas[_i]);
 							i++;
 						}
@@ -97,8 +95,7 @@ namespace kalk
 						}
 					}
 					digits.Add(Convert.ToDouble(new string(tempDigit.ToArray())));
-				}
-				else if (mas[i] != ')')
+				} else if (mas[i] != ')')
 					operand.Add(mas[i]);
 			}
 		}

@@ -330,6 +330,7 @@ namespace kalk
 			this.Board.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.Board.Location = new System.Drawing.Point(6, 6);
 			this.Board.Name = "Board";
+			this.Board.ReadOnly = true;
 			this.Board.Size = new System.Drawing.Size(393, 47);
 			this.Board.TabIndex = 21;
 			this.Board.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -723,6 +724,7 @@ namespace kalk
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.KeyPreview = true;
 			this.Name = "calculatorByPrusov";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Calculator";

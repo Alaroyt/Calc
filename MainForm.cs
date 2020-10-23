@@ -1,8 +1,6 @@
 ﻿// (Board.Text == "") - проверка на пустоту текстБокса
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
-using System.Text.RegularExpressions;
 using System.Linq;
 
 namespace kalk
@@ -15,15 +13,15 @@ namespace kalk
 		{
 			InitializeComponent();
 
-			Board.ReadOnly = true;
-
-			this.KeyPreview = true;
 
 			MaximizeBox = false;
 
 			Width = 428;
 			Height = 395;
 		}
+		/// <summary>
+		/// Смена вкладок
+		/// </summary>
 		void TabContro1SelectedIndexChanged(object sender, EventArgs e)// Если вкладки переключаются, размеры формы меняются
 		{
 			if (tabControl1.SelectedIndex == 0) {
@@ -76,11 +74,10 @@ namespace kalk
 			if (e.KeyCode == Keys.Escape) // завершение программы на ESC
 				Close();
 		}
+		
+		#region calc
 
-		//
-		// Калькулятор
-		//
-
+		#region digit buttons
 		void One(object sender, EventArgs e)
 		{
 			if (!Board.Text.Contains(")"))
@@ -154,7 +151,10 @@ namespace kalk
 				Board.Text = Board.Text.Remove(Board.Text.Length - 1, 1) + "0" + ")";
 
 		}
-
+		#endregion
+		
+		
+		#region function buttons
 		void Comma(object sender, EventArgs e)
 		{
 			if (Board.Text != "") {
@@ -178,7 +178,7 @@ namespace kalk
 			}
 			if (Board.Text != "") {
 				line += Board.Text;
-				string temp = Calculated.Kalk(line);
+				string temp = Calculated.SolveString(line);
 				if (!temp.Contains("-")) {
 					Board.Text = temp;
 				} else
@@ -247,7 +247,7 @@ namespace kalk
 					}
 				}
 			} catch {
-				MessageBox.Show("произошла ошибОчка в _Delete()", "Achtung");
+				MessageBox.Show("Что-то пошло не так", "Achtung");
 			}
 		}
 		void Factorial(object sender, EventArgs e)
@@ -299,6 +299,17 @@ namespace kalk
 					Board.Text = "(" + Board.Text + ")";
 			}
 		}
+		void divOnX(object sender, EventArgs e)
+		{
+			if (Board.Text != "") {
+				if (!Board.Text.Contains(")"))
+					Board.Text = (1 / Convert.ToDouble(Board.Text)).ToString();
+				else {
+					Board.Text = Board.Text.Trim('(', '-', ')');
+					Board.Text = "(-" + (1 / Convert.ToDouble(Board.Text)).ToString() + ")";
+				}
+			}
+		}
 		void Pi(object sender, EventArgs e)
 		{
 			if (Board.Text == "")
@@ -313,10 +324,12 @@ namespace kalk
 				}
 			}
 		}
+		#endregion
 		
-		//
-		// Системы счисления
-		//
+		#endregion
+		
+		#region numbers
+		
 
 		void CheckIsNeedReadOnly()
 		{
@@ -447,17 +460,6 @@ namespace kalk
 				rank4.Text = "";
 			}
 		}
-		
-		void divOnX(object sender, EventArgs e)
-		{
-			if (Board.Text != "") {
-				if (!Board.Text.Contains(")"))
-					Board.Text = (1 / Convert.ToDouble(Board.Text)).ToString();
-				else {
-					Board.Text = Board.Text.Trim('(', '-', ')');
-					Board.Text = "(-" + (1 / Convert.ToDouble(Board.Text)).ToString() + ")";
-				}
-			}
-		}
+		#endregion
 	}
 }
