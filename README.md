@@ -1,3 +1,3 @@
 # Calculator
 
-My first WinForms applications.
+WinForms calculator.
